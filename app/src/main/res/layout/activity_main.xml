@@ -4,15 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="344dp"
+        android:layout_height="462dp"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="257dp"
+            android:layout_height="181dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="70dp"
+            app:srcCompat="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="442dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/userbox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="190dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textbox"
+                android:drawableRight="@drawable/username"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="نام کاربری"
+                android:inputType="textPersonName"
+                android:paddingRight="7dp" />
+
+            <EditText
+                android:id="@+id/passwordbox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/textbox"
+                android:drawableRight="@drawable/password"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="رمز عبور"
+                android:inputType="textPassword"
+                android:paddingRight="7dp" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#155E1E"
+                android:text="ورود به سیستم"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#155E1E"
+                android:text="ساخت حساب کاربری"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
